@@ -1,0 +1,23 @@
+spring:
+  application:
+    #    应用名称
+    name: reggie_take_out
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url后边加参数,防乱码
+    url: jdbc:mysql://localhost:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+server:
+  port: 8080
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #主键类型
+      id-type: assign_id
+reggie:
+  path: D:\reggie\
